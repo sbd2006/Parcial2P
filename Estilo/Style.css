@@ -118,14 +118,14 @@ img {
 
 
 .banner {
-    background-image: url('./images/banner-background.png');
+    background-image: url('../images/banner-background.png');
     background-size: cover;
     background-position: center;
     height: 75vh;
     display: flex;
     align-items: center; 
     justify-content: flex-start; 
-    padding-left: 8%;
+    padding-left: 9%;
 }
 
 .banner__content {
@@ -270,10 +270,10 @@ img {
 
 .promo-section {
     background-color: #e5f6f8;
-    background-image: url('./images/more-background.jpeg'); 
+    background-image: url('../images/more-background.jpeg'); 
     background-size: cover;
     background-position: center;
-    padding: 4rem 5%;
+    padding: 8rem 10%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -283,7 +283,7 @@ img {
     background-color: #e5f6f8; 
     padding: 3rem; 
     width: 100%;
-    max-width: 450px; 
+    max-width: 550px; 
     text-align: center; 
 }
 
