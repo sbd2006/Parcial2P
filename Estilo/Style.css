@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-purple-bg: #634f96; 
+    --color-yellow-card: #e5cd6e; 
+    --color-dark-teal: #0b454e; 
+    --color-light-gray: #f4f4f4;
+    --color-btn-red: #d13a34;
+    --color-btn-purple: #9063cd;
+    
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn--primary {
+    background-color: var(--color-btn-red);
+    color: var(--color-white);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.btn--purple {
+    background-color: var(--color-btn-purple);
+    color: var(--color-white);
+    margin-top: var(--space-sm);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar__logo-link {
+    flex: 1; 
+}
+
+.navbar__logo {
+    width: 80px;
+}
+
+.navbar__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex: 2; 
+    justify-content: center;
+}
+
+.navbar__actions {
+    flex: 1; 
+    text-align: right;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+.navbar__link:hover {
+    text-decoration: underline;
+}
+
+
+.banner {
+    background-image: url('./images/banner-background.png');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding-left: 8%;
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    max-width: 450px;
+    gap: 1.5rem;
+}
+
+.banner__title-img {
+    width: 350px; 
+}
+
+.banner__text {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.banner__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px; 
+    gap: 1rem;
+}
+
+.banner__buttons .btn {
+    text-align: center; 
+}
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section--purple { 
+    background-color: var(--color-purple-bg); 
+}
+
+.section--dark-teal { 
+    background-color: var(--color-dark-teal); 
+}
+
+.section--light { 
+    background-color: var(--color-light-gray); 
+}
+
+.section__heading {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: var(--space-lg);
+}
+
+.section__heading--light { 
+    color: var(--color-white); 
+}
+
+
+.grid-4 { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; 
+}
+
+
+.grid-3 { 
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; 
+}
+
+
+.grid-5 { 
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; 
+}
+
+.grid-2 { 
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card--shop .card__body {
+    background-color: var(--color-yellow-card);
+}
+.card--shop .card__title { 
+    font-size: 1.1rem; margin-bottom: 0.5rem; 
+}
+
+.card--shop .card__desc { 
+    font-size: 0.85rem; margin-bottom: 1rem; flex-grow: 1; 
+}
+
+.card--dark .card__body {
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+.card--park .card__body {
+    background-color: var(--color-white);
+}
+
+.card__link {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: var(--color-black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-black);
+}
+
+.card__link--light {
+    color: var(--color-white);
+    border-bottom-color: var(--color-white);
+}
+
+.movie-poster {
+    text-align: center;
+}
+.movie-poster__img {
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+.movie-poster__title {
+    font-size: 0.9rem;
+}
+
+.promo-section {
+    background-color: #e5f6f8;
+    background-image: url('./images/more-background.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.promo-section__content {
+    background-color: #e5f6f8; 
+    padding: 3rem; 
+    width: 100%;
+    max-width: 450px; 
+    text-align: center; 
+}
+
+.promo-section__title {
+    color: #1a3c70;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.promo-section__subtitle { 
+    font-size: 1.1rem; margin-top: 1rem; 
+
+}
+.promo-section__text { 
+    font-size: 0.9rem; 
+}
+
+.footer {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--color-white);
+}
+
+.footer__logo {
+    width: 80px;
+    margin: 0 auto 1.5rem auto; 
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem; 
+    margin-bottom: 0.8rem; 
+}
+
+.footer-nav__link {
+    text-decoration: none;
+    color: #333; 
+    font-size: 0.75rem; 
+}
+
+.footer-nav__link:hover {
+    text-decoration: underline;
+}
+
+.footer__text {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 1.5rem; 
+}
+
+@media (max-width: 992px) {
+    .grid-4, .grid-5 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(1, 1fr); }
+    .promo-section__content { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .navbar__list { 
+        display: none;  
+    }
+    .grid-4, .grid-5, .grid-2 { 
+        grid-template-columns: 1fr; 
+    }
+}
